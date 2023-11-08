@@ -18,8 +18,8 @@ class Dog {
 
 function makeNoise(animal) {
   // The makeNoise function expects an object with a "makeNoise" method
-  if (animal && typeof animal.makeNoise === "function") {
-    animal.makeNoise();
+  if (animal && typeof animal.bark === "function") {
+    animal.bark();
   } else {
     console.log("This animal doesn't make a noise.");
   }
