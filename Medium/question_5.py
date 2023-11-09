@@ -10,19 +10,12 @@ The object of the same class is required to invoke a public method.
 """
 
 
-class Student:
+class StudentPublic:
     school_name = "XYZ School"
 
     def __init__(self, name, age):
         self.name = name
         self.age = age
-
-
-student = Student("Steve", 25)
-print(student.school_name)
-print(student.name)
-student.age = 20
-print(student.age)
 
 
 """
@@ -32,19 +25,12 @@ member prefix the member name with double underscore “_”.
 """
 
 
-class Student:
+class StudentProtected:
     _school_name = "XYZ School"
 
     def __init__(self, name, age):
         self._name = name
         self._age = age
-
-
-student = Student("John", 25)
-print(student._name)
-
-student._name = "Watson"
-print(student._name)
 
 
 """
@@ -55,7 +41,7 @@ name with double underscore “__”.
 """
 
 
-class Student:
+class StudentPrivate:
     __school_name = "XYZ School"
 
     def __init__(self, name, age):
@@ -66,13 +52,27 @@ class Student:
         print("This is private method.")
 
 
-student = Student("Bill", 25)
-print(
-    student.__school_name
-)  # AttributeError: 'Student' object has no attribute '__school_name'
+if __name__ == "__main__":
+    # Public members
+    student = StudentPublic("Steve", 25)
+    print(f"Student: {student.school_name, student.name, student.age}")
+    student.age = 20
+    print(f"Updated age: {student.age}")
 
-print(student.__name)  # AttributeError: 'Student' object has no attribute '__name'
+    # Protected members
+    student = StudentProtected("John", 25)
+    print(f"Student name: {student._name}")
+    student._name = "Watson"
+    print(f"Updated student name: {student._name}")
 
-print(
-    student.__display()
-)  # AttributeError: 'Student' object has no attribute '__display'
+    # Private members
+    student = StudentPrivate("Bill", 25)
+
+    # Following statement will give error as it is a private member: AttributeError: 'StudentPrivate' object has no attribute '__school_name'
+    print(student.__school_name)
+
+    # Following statement will give error as it is a private member: AttributeError: 'StudentPrivate' object has no attribute '__name'
+    print(student.__name)
+
+    # Following statement will give error as it is a private member: AttributeError: 'StudentPrivate' object has no attribute '__display'
+    print(student.__display())
