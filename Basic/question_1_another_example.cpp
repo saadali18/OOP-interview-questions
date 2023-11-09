@@ -43,9 +43,7 @@ int main()
 
 The concept of abstraction only shows necessary information to the users. It reduces the complexity of the program by hiding the implementation complexities of programs. 
 
-#include <iostream>
-using namespace std;
- 
+
 class Sum {
 private:
     // private variables
