@@ -24,11 +24,9 @@ class Circle:
         return 3.14 * self.radius * self.radius
 
 if __name__ == "__main__":
-    # Create an instance of the Circle class
     myCircle = Circle(5.0)
 
     # Call the method to calculate the area
     area = myCircle.calculateArea()
 
-    # Display the result
     print("The area of the circle is:", area)
