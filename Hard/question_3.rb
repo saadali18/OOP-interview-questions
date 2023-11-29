@@ -1,7 +1,11 @@
 # --------------ASSOCIATION--------------
 
-# Definition: Association represents a bi-directional relationship between two classes. It's a more generic term and 
-# doesn't imply a strong ownership or lifecycle dependency between the objects.
+# Definition: Association represents a bi-directional relationship between two classes. It's a more generic term and doesn't imply a strong ownership or lifecycle dependency between the objects. It can be a one-to-one, one-to-many, or many-to-many relationship.
+
+
+# Let's take an example of two classes: 'Author' and 'Book'.
+# An association exists between them because an author can write multiple books, and a book can be written by a single author. 
+# This is a simple association without implying strong ownership or lifecycle dependency.
 
 # Code Example:
 class Author
@@ -27,8 +31,11 @@ puts book.author.name
 
 # --------------COMPOSITION--------------
 
-# Definition: Composition implies a strong relationship between two classes where one class contains the other, and the 
-# contained class has no independent existence. If the container is destroyed, the contained class is also destroyed.
+# Definition: Composition implies a strong relationship between two classes where one class contains the other, and the contained class has no independent existence. If the container is destroyed, the contained class is also destroyed.
+
+# Let's take an example of two classes: 'Car' and 'Engine'.
+# A composition relationship exists because an engine is an integral part of a car. A car "has" an engine, and without the engine, the car cannot function.
+# This implies a strong ownership, and the lifecycle of the engine is closely tied to the lifecycle of the car.
 
 # Code Example:
 class Engine
