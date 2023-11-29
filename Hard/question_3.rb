@@ -7,6 +7,14 @@
 # An association exists between them because an author can write multiple books, and a book can be written by a single author. 
 # This is a simple association without implying strong ownership or lifecycle dependency.
 
+# +----------------+       +-----------------+
+# |     Author     |       |      Book       |
+# +----------------+       +-----------------+
+# | - name: String |       | - title: String |
+# +----------------+       | - author: Author|
+#                          +-----------------+
+
+
 # Code Example:
 class Author
     attr_accessor :name
@@ -36,6 +44,14 @@ puts book.author.name
 # Let's take an example of two classes: 'Car' and 'Engine'.
 # A composition relationship exists because an engine is an integral part of a car. A car "has" an engine, and without the engine, the car cannot function.
 # This implies a strong ownership, and the lifecycle of the engine is closely tied to the lifecycle of the car.
+
+# +----------------+        +-----------------+
+# |     Engine     |        |      Car        |
+# +----------------+        +-----------------+
+# | + start()      |        | - make: String  |
+# +----------------+        | - engine: Engine|
+#                           +-----------------+
+
 
 # Code Example:
 class Engine
