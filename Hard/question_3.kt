@@ -37,11 +37,22 @@ class Engine {
 }
 
 // Class representing a Car composed of an Engine
-class Car(private val engine: Engine) {
-    // Method to start the car's engine by invoking the Engine's start method
+class Car {
+    // Private property for the Engine
+    private val engine: Engine = Engine()
+
+    // Method to start the car's engine
     fun startEngine() {
         engine.start()
     }
+}
+
+fun main() {
+    // Creating a Car (now the Engine is created within the Car)
+    val car = Car()
+
+    // Starting the car's engine
+    car.startEngine()
 }
 
 fun main() {
