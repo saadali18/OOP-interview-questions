@@ -1,4 +1,3 @@
-
 //Abstraction: 
 //Abstraction is the process of simplifying complex systems 
 //by focusing on essential properties and behaviors while ignoring unnecessary details, 
@@ -8,7 +7,6 @@
 //Encapsulation is the bundling of data and methods that operate on that data into a single unit, 
 //typically a class in object-oriented programming, and restricting direct access to the internal 
 //details of the object.
-
 
 // Abstract class representing a Shape
 
