@@ -37,14 +37,9 @@ private:
 int main() {
 
     Car myCar("Toyota", "Camry");
-
     myCar.displayDetails();
-
     myCar.start();
-
     myCar.stop();
-
-   
     return 0;
 }
 
