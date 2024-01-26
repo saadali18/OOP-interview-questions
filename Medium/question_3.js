@@ -1,3 +1,4 @@
+//  In this room, can you give any practical example of polymorphism
 // Base class
 class Item {
   displayInfo() {
@@ -30,8 +31,8 @@ function displayItemInfo(item) {
 }
 
 // Creating instances of Wall and Clock
-const myWall = new Wall();
-const myClock = new Clock("12:30 PM");
+let myWall = new Wall();
+let myClock = new Clock("12:30 PM");
 
 // Displaying and logging information using the common interface (Item)
 console.log(displayItemInfo(myWall)); // Output: This is a wall.
